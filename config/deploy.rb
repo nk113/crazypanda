@@ -1,13 +1,17 @@
 require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
 
+
+PROJECT_NAME = File.basename(File.expand_path(File.join(File.dirname(__FILE__), '../')))
+
+
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
-set :application, 'crazypanda'
+set :application, PROJECT_NAME
 set :stages, %w(vagrant staging production)
 set :scm, :git
-set :repository,  'https://github.com/nk113/crazypanda.git'
+set :repository, "https://github.com/nk113/#{PROJECT_NAME}.git"
 set :default_stage, 'vagrant'
 set :user, 'deploy'
 set :use_sudo, false

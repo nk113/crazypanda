@@ -8,7 +8,10 @@ gem 'rails', '4.0.0'
 gem 'rails-i18n'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :test
+
+# Use mysql as the database for Active Record
+gem 'mysql2'
 
 # Authentication. Read more:  https://github.com/plataformatec/devise
 gem 'devise', ">= 3.0.2"

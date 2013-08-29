@@ -4,7 +4,7 @@ require 'open-uri'
 require 'openssl'
 
 
-PROJECT_NAME = File.basename(Dir.getwd)
+PROJECT_NAME = File.dirname(File.dirname(__FILE__))
 
 BOX = 'precise64'
 BOX_URL = 'http://files.vagrantup.com/precise64.box'
