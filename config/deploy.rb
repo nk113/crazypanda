@@ -9,6 +9,7 @@ set :stages, %w(vagrant staging production)
 set :scm, :git
 set :repository,  'https://github.com/nk113/crazypanda.git'
 set :default_stage, 'vagrant'
+set :user, 'deploy'
 set :use_sudo, false
 set :keep_releases, 5
 set :deploy_to, defer { "/u/apps/#{application}_#{stage}" }

@@ -7,11 +7,15 @@ ruby '2.0.0'
 gem 'rails', '4.0.0'
 gem 'rails-i18n'
 
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
+
 # Authentication. Read more:  https://github.com/plataformatec/devise
 gem 'devise', ">= 3.0.2"
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use haml as template
+gem 'haml'
+gem 'haml-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -42,14 +46,15 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Use unicorn as the app server
 gem 'unicorn'
 
-# Use Capistrano for deployment
-gem 'capistrano', group: :development
-
 # Rails 12factor
 gem 'rails_12factor', group: :production
 
 group :test, :development do
   gem 'debugger'
+
+  # Use Capistrano for deployment
+  gem 'capistrano'
+
   gem 'rspec-rails', '~> 2.0'
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended

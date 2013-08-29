@@ -4,7 +4,6 @@
 VAGRANT = '127.0.0.1'
 
 set :rails_env, :vagrant
-set :user, 'vagrant'
 
 # use params from "vagrant ssh-config" command
 set :ssh_options, { port: 2222, keys: ['~/.vagrant.d/insecure_private_key'] }

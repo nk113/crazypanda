@@ -1,4 +1,4 @@
-OAReadme
+Readme
 ======
 
 ## Getting started
